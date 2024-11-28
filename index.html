@@ -7,6 +7,12 @@
   <title>Hosanna Group Pty Ltd</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("o4L8LoCcwa2om4qo3");
+    })();
+</script>
 <body>
   <header>
     <div class="logo">
@@ -60,21 +66,41 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="send_mail.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="phone" placeholder="Phone Number" required>
-      <select name="service" required>
-        <option value="">Select Service</option>
-        <option value="commercial">Commercial Cleaning</option>
-        <option value="school">School Cleaning</option>
-        <option value="custom">Custom Cleaning Plan</option>
-      </select>
-      <textarea name="message" placeholder="Tell us more about your requirements" rows="4" required></textarea>
-      <button type="submit" class="btn">Request a Quote</button>
+    <form id="quote-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" required>
+        
+        <label for="from_email">Email:</label>
+        <input type="email" id="from_email" name="from_email" required>
+        
+        <label for="business_name">Business Name:</label>
+        <input type="text" id="business_name" name="business_name">
+        
+        <label for="service_required">Service Required:</label>
+        <select id="service_required" name="service_required" required>
+            <option value="Commercial Cleaning">Commercial Cleaning</option>
+            <option value="Residential Cleaning">Residential Cleaning</option>
+            <option value="School Cleaning">School Cleaning</option>
+        </select>
+        
+        <label for="frequency">Frequency:</label>
+        <select id="frequency" name="frequency" required>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+        </select>
+        
+        <label for="message">Additional Information:</label>
+        <textarea id="message" name="message"></textarea>
+        
+        <button type="submit">Request a Quote</button>
     </form>
+    
+    
   </section>
-  
 
   <footer>
     <p>&copy; 2024 Hosanna Group Pty Ltd. All Rights Reserved.</p>
