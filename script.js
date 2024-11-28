@@ -1,3 +1,5 @@
+emailjs.init("o4L8LoCcwa2om4qo3");
+
 document.getElementById("quote-form").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent form from submitting the traditional way
     
