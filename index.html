@@ -1,7 +1,82 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Cleaning Services by Hosanna Group Pty Ltd. Trusted cleaning solutions for schools, offices, and commercial spaces.">
+  <title>Hosanna Group Pty Ltd</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Hosanna Group</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Your Trusted Cleaning Partner</h2>
+      <p>Over 20 years of experience in creating clean, safe, and healthy environments for schools, offices, and commercial spaces.</p>
+      <a href="#contact" class="btn">Request a Quote</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Commercial Cleaning</h3>
+        <p>Keep your workplace spotless with tailored cleaning solutions.</p>
+      </div>
+      <div class="service-card">
+        <h3>School Cleaning</h3>
+        <p>Specialized cleaning services to ensure a safe learning environment.</p>
+      </div>
+      <div class="service-card">
+        <h3>Custom Cleaning Plans</h3>
+        <p>Flexible schedules and tasks to meet your specific needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Hosanna Group Pty Ltd has been delivering professional cleaning services for over 20 years. We take pride in ensuring customer satisfaction, safety, and environmental sustainability in every task we undertake.</p>
+    <ul>
+      <li>Fully accredited staff trained to work with children.</li>
+      <li>Registered with the SAM 4 Schools program.</li>
+      <li>Eco-friendly cleaning products and practices.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="commercial">Commercial Cleaning</option>
+        <option value="school">School Cleaning</option>
+        <option value="custom">Custom Cleaning Plan</option>
+      </select>
+      <textarea name="message" placeholder="Tell us more about your requirements" rows="4" required></textarea>
+      <button type="submit" class="btn">Request a Quote</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Hosanna Group Pty Ltd. All Rights Reserved.</p>
+  </footer>
+</body>
 </html>
