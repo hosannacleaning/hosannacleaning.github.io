@@ -59,7 +59,7 @@ header .contact-info a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 40px;
-  background: url('Images/hero.jpg') no-repeat center center/cover;
+  background-color: red; /* Temporary color for debugging */
   color: #fff;
   height: 80vh;
 }
