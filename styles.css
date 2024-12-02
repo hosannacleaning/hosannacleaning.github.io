@@ -55,7 +55,7 @@ header .contact-info a:hover {
 
 /* Hero Section */
 .hero {
-  background-color: red; /* Temporary color for debugging */
+  background: url('Images/hero.jpg') no-repeat center center/cover;
   height: 100vh; /* Full-screen height for the hero section */
   display: flex;
   justify-content: space-between;
