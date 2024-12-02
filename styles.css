@@ -16,13 +16,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background: #004080;
   color: #fff;
+  margin: 0;
 }
 
-header .logo img {
-  height: 50px;
+header img {
+  max-height: 80px; /* Set a max height for the logo to fit in the header */
+  width: auto; /* Maintain aspect ratio */
+}
+
+header .logo-container {
+  padding: 0; /* Remove extra padding around logo */
 }
 
 header ul {
@@ -37,10 +43,14 @@ header ul li {
 header ul li a {
   text-decoration: none;
   color: #fff;
+  padding: 5px 10px; /* Add padding for space around the text */
+  border: 2px solid transparent; /* Default border is transparent */
+  border-radius: 5px; /* Optional, adds rounded corners */
 }
 
 header ul li a:hover {
-  text-decoration: underline;
+  border-color: #fff; /* Shows the border when hovered */
+  background-color: rgba(255, 255, 255, 0.2); /* Adds a subtle background highlight */
 }
 
 header .contact-info a {
@@ -55,34 +65,54 @@ header .contact-info a:hover {
 
 /* Hero Section */
 .hero {
+  position: relative;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Hero section takes the full height of the viewport */
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px;
-  background: url('Images/hero.jpg') no-repeat center center/cover;
-  color: #fff;
-  height: 80vh;
+  justify-content: center;
+  align-items: center; /* Center content vertically and horizontally */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is below the content but above the background */
 }
 
 .hero-content {
-  max-width: 50%;
+  position: relative;
+  z-index: 2; /* Ensure the content appears above the overlay */
+  text-align: center;
+  color: #fff; /* White text for better visibility */
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 3em;
   margin-bottom: 20px;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-.quote-form {
-  background: rgba(255, 255, 255, 0.9);
+.hero .quote-form {
+  position: relative;
+  z-index: 3; /* Ensure the form is above the overlay and other content */
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for form */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  border-radius: 10px;
 }
 
 .quote-form h2 {
@@ -188,4 +218,68 @@ footer {
   padding: 10px;
   background: #004080;
   color: #fff;
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+      font-size: 2em; /* Make the title smaller on mobile */
+  }
+
+  .hero p {
+      font-size: 1em; /* Adjust paragraph text size */
+  }
+
+  .hero .quote-form {
+      width: 90%; /* Make the quote form take more space on mobile */
+      padding: 15px; /* Reduce padding to make form fit better */
+  }
+
+  /* Adjust hero section layout for small screens */
+  .hero {
+      height: auto; /* Allow the height to be flexible on small screens */
+      padding: 20px;
+  }
+
+  /* Adjust the overlay for small screens */
+  .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+  }
+
+  /* Adjust header and navigation for mobile */
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav {
+      display: block;
+      text-align: center;
+  }
+
+  nav a {
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.8em; /* Further reduce size of the heading on very small screens */
+  }
+
+  .hero p {
+      font-size: 0.9em; /* Adjust paragraph text size for small devices */
+  }
+
+  .hero .quote-form {
+      width: 100%; /* Make the form fit the screen on very small screens */
+  }
+
+  /* Adjust header logo size */
+  header img {
+      max-width: 120px; /* Reduce logo size on small screens */
+  }
 }
