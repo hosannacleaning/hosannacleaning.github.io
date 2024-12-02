@@ -59,7 +59,7 @@ header .contact-info a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 40px;
-  background-color: red; /* Temporary color for debugging */
+  background: url('Images/hero.jpg') no-repeat center center/cover;
   color: #fff;
   height: 80vh;
 }
@@ -188,19 +188,4 @@ footer {
   padding: 10px;
   background: #004080;
   color: #fff;
-}
-
-
-@media (max-width: 768px) {
-  .hero {
-      height: 50vh; /* Reduce the height on smaller screens */
-  }
-
-  .hero h1 {
-      font-size: 2.5em; /* Reduce font size for smaller screens */
-  }
-
-  .hero-content {
-      max-width: 90%; /* Allow content to take more width on mobile */
-  }
 }
