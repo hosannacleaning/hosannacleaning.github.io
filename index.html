@@ -6,12 +6,11 @@
   <meta name="description" content="Professional Cleaning Services by Hosanna Group Pty Ltd. Trusted cleaning solutions for schools, offices, and commercial spaces.">
   <title>Hosanna Group Pty Ltd</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="Images/hosanna group logo.png" alt="Hosanna Group Logo">
+      <img src="Images/hosanna%20group%20logo.png" alt="Hosanna Group Logo">
     </div>
     <nav>
       <ul>
@@ -21,13 +20,38 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="contact-info">
+      <a href="tel:1300520417">1300 520 417</a>
+    </div>
   </header>
 
   <section id="home" class="hero">
     <div class="hero-content">
-      <h2>Your Trusted Cleaning Partner</h2>
-      <p>Over 20 years of experience in creating clean, safe, and healthy environments for schools, offices, and commercial spaces.</p>
-      <a href="#contact" class="btn">Request a Quote</a>
+      <h1>We Are The Expert In Commercial Cleaning Service</h1>
+      <p>Request a quote now, and we will get back to you in a flash.</p>
+    </div>
+    <div class="quote-form">
+      <h2>Request a Quote</h2>
+      <form id="quote-form" action="#" method="post">
+        <input type="text" id="name" name="name" placeholder="Your Name *" required>
+        <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number *" required>
+        <input type="email" id="from_email" name="from_email" placeholder="Company Email *" required>
+        <input type="text" id="business_name" name="business_name" placeholder="Business Name *">
+        <select id="service_required" name="service_required" required>
+          <option value="" disabled selected>Service Required *</option>
+          <option value="Commercial Cleaning">Commercial Cleaning</option>
+          <option value="Residential Cleaning">Residential Cleaning</option>
+          <option value="School Cleaning">School Cleaning</option>
+        </select>
+        <select id="frequency" name="frequency" required>
+          <option value="" disabled selected>Frequency *</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Monthly">Monthly</option>
+        </select>
+        <textarea id="message" name="message" placeholder="Tell us more about your requirement"></textarea>
+        <button type="submit" class="btn">Request a Quote</button>
+      </form>
     </div>
   </section>
 
@@ -57,42 +81,6 @@
       <li>Registered with the SAM 4 Schools program.</li>
       <li>Eco-friendly cleaning products and practices.</li>
     </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="quote-form" action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="phone_number">Phone Number:</label>
-      <input type="tel" id="phone_number" name="phone_number" required>
-      
-      <label for="from_email">Email:</label>
-      <input type="email" id="from_email" name="from_email" required>
-      
-      <label for="business_name">Business Name:</label>
-      <input type="text" id="business_name" name="business_name">
-      
-      <label for="service_required">Service Required:</label>
-      <select id="service_required" name="service_required" required>
-        <option value="Commercial Cleaning">Commercial Cleaning</option>
-        <option value="Residential Cleaning">Residential Cleaning</option>
-        <option value="School Cleaning">School Cleaning</option>
-      </select>
-      
-      <label for="frequency">Frequency:</label>
-      <select id="frequency" name="frequency" required>
-        <option value="Daily">Daily</option>
-        <option value="Weekly">Weekly</option>
-        <option value="Monthly">Monthly</option>
-      </select>
-      
-      <label for="message">Additional Information:</label>
-      <textarea id="message" name="message"></textarea>
-      
-      <button type="submit" class="btn">Request a Quote</button>
-    </form>
   </section>
 
   <footer>
