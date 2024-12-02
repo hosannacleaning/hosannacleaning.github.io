@@ -59,39 +59,64 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background: url('hero.jpg') no-repeat center center/cover;
-  height: 70vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  padding: 40px;
+  background: url('Images/hero.jpg') no-repeat center center/cover;
   color: #fff;
-  padding: 20px;
+  height: 80vh;
 }
 
-.hero-content h2 {
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 1.2rem;
+}
+
+.quote-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.quote-form h2 {
   margin-bottom: 20px;
+  color: #004080;
 }
 
-.hero .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #00aaff;
-  color: #fff;
-  text-decoration: none;
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  font-weight: 500;
-  transition: background 0.3s ease;
 }
 
-.hero .btn:hover {
-  background: #0073e6;
+.quote-form button {
+  background: #e60b2f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.quote-form button:hover {
+  background: #b00925;
 }
 
 /* Services Section */
@@ -159,59 +184,6 @@ header nav ul li a:hover {
 #about ul li {
   margin: 10px 0;
   color: #555;
-}
-
-/* Contact Section */
-#contact {
-  padding: 40px 20px;
-  background: #f4f4f4;
-}
-
-#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #004080;
-  text-align: center;
-}
-
-#contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#contact input,
-#contact select,
-#contact textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  transition: border-color 0.3s ease;
-}
-
-#contact input:focus,
-#contact select:focus,
-#contact textarea:focus {
-  border-color: #00aaff;
-}
-
-#contact .btn {
-  background: #004080;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-#contact .btn:hover {
-  background: #0073e6;
 }
 
 /* Footer */
