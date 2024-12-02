@@ -55,13 +55,14 @@ header .contact-info a:hover {
 
 /* Hero Section */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px;
   background: url('Images/hero.jpg') no-repeat center center/cover;
+  height: 100vh; /* Full-screen height for the hero section */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   color: #fff;
-  height: 80vh;
+  text-align: left; /* Align text to the left */
 }
 
 .hero-content {
