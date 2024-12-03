@@ -3,7 +3,7 @@ emailjs.init("o4L8LoCcwa2om4qo3");
 document.getElementById("quote-form").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent form from submitting the traditional way
     
-    emailjs.sendForm("service_n5ql74e", "template_3izqnqu", this)
+    emailjs.sendForm("service_f2whitn", "template_3izqnqu", this)
     .then(function(response) {
         console.log("Quote request sent:", response);
         alert("Your quote request has been sent successfully!");
