@@ -43,12 +43,17 @@
           <option value="Commercial Cleaning">Commercial Cleaning</option>
           <option value="Residential Cleaning">Residential Cleaning</option>
           <option value="School Cleaning">School Cleaning</option>
+          <option value="Carpet Cleaning">Carpet Cleaning</option>
+          <option value="Window Cleaning">Window Cleaning</option>
+          <option value="Floor Maintenance">Floor Maintenance</option>
         </select>
         <select id="frequency" name="frequency" required>
           <option value="" disabled selected>Frequency *</option>
+          <option value="One-Time">One-Time</option>
           <option value="Daily">Daily</option>
           <option value="Weekly">Weekly</option>
           <option value="Monthly">Monthly</option>
+          <option value="On request">On request</option>
         </select>
         <textarea id="message" name="message" placeholder="Please write more information on service required"></textarea>
         <button type="submit" class="btn">Request a Quote</button>
@@ -58,34 +63,63 @@
 
   <section id="services">
     <h2>Our Services</h2>
-    <div class="service-cards">
+    <div class="services-container">
       <div class="service-card">
         <h3>Commercial Cleaning</h3>
-        <p>Keep your workplace spotless with tailored cleaning solutions.</p>
+        <p>Tailored cleaning solutions to keep your workplace spotless.</p>
       </div>
       <div class="service-card">
         <h3>School Cleaning</h3>
-        <p>Specialized cleaning services to ensure a safe learning environment.</p>
+        <p>Creating a safe and healthy learning environment.</p>
       </div>
       <div class="service-card">
         <h3>Carpet Cleaning</h3>
-        <p>Restore the cleanliness and freshness of your carpets with our professional cleaning services.</p>
+        <p>Professional cleaning for carpets to ensure long-lasting freshness.</p>
       </div>
       <div class="service-card">
-        <h3>Custom Cleaning Plans</h3>
-        <p>Flexible schedules and tasks to meet your specific needs.</p>
+        <h3>Window Cleaning</h3>
+        <p>Streak-free, professional window cleaning for a brighter space.</p>
+      </div>
+      <div class="service-card">
+        <h3>Floor Maintenance</h3>
+        <p>Polishing, waxing, and maintaining all types of flooring.</p>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Hosanna Group Pty Ltd has been delivering professional cleaning services for over 20 years. We take pride in ensuring customer satisfaction, safety, and environmental sustainability in every task we undertake.</p>
-    <ul>
-      <li>Fully accredited staff trained to work with children.</li>
-      <li>Registered with the SAM 4 Schools program.</li>
-      <li>Eco-friendly cleaning products and practices.</li>
-    </ul>
+  <section id="about-us">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p class="about-intro">
+        At Hosanna Group, we are dedicated to providing exceptional commercial cleaning services that meet and exceed your expectations. 
+        Our highly skilled team combines professionalism with eco-friendly practices, ensuring a safe and spotless environment for your business or institution.
+      </p>
+      <p class="about-intro">
+        With over 20 years of experience, we specialize in tailored cleaning solutions designed to fit the unique needs of offices, schools, 
+        and commercial properties. Partner with us and experience the difference a clean and well-maintained space can make.
+      </p>
+      <div class="core-values">
+        <h3>Our Core Values</h3>
+        <div class="values-list">
+          <div class="value-item">
+            <h4>Integrity</h4>
+            <p>Upholding honesty and trust in every service we deliver.</p>
+          </div>
+          <div class="value-item">
+            <h4>Excellence</h4>
+            <p>Commitment to outstanding quality and professionalism.</p>
+          </div>
+          <div class="value-item">
+            <h4>Sustainability</h4>
+            <p>Prioritizing environmentally responsible cleaning solutions.</p>
+          </div>
+          <div class="value-item">
+            <h4>Customer Focus</h4>
+            <p>Your satisfaction is our ultimate goal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
