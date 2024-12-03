@@ -25,6 +25,7 @@ header {
 header img {
   max-height: 80px; /* Set a max height for the logo to fit in the header */
   width: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
 }
 
 header .logo-container {
@@ -132,7 +133,7 @@ header .contact-info a:hover {
 }
 
 .quote-form button {
-  background: #e60b2f;
+  background: #0056b3;
   color: #fff;
   border: none;
   padding: 10px;
@@ -142,7 +143,7 @@ header .contact-info a:hover {
 }
 
 .quote-form button:hover {
-  background: #b00925;
+  background: #003d7a;
 }
 
 /* About Us Section */
@@ -277,30 +278,35 @@ footer {
   color: #fff;
 }
 
-
 /* General mobile styles */
 @media (max-width: 768px) {
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
+    margin: 5px 0; /* Reduces space around the nav menu */
+    padding: 0;
+    position: relative; /* Ensures the header layers correctly */
+    z-index: 10; /* Keeps the header on top */
+    margin-top: 0;
   }
 
   header .logo img {
     max-width: 120px; /* Reduce the logo size */
+    margin-top: 10px;
+    border-radius: 5px;
   }
 
   header ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px 0;
     padding: 0;
+    z-index: 10; /* Ensures the menu is visible */
   }
 
   header ul li {
-    margin: 5px 10px;
+    margin: 5px 0px;
   }
 
   header ul li a {
@@ -310,23 +316,51 @@ footer {
 
   /* Hero Section */
   .hero {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px; /* Increased padding for more space */
+    position: relative; /* Ensures no overlap with header or form */
+    min-height: 850px; /* Set a minimum height for the hero section */
+    justify-content: center; /* Center content vertically */
   }
 
   .hero-content {
     max-width: 90%;
+    z-index: 1; /* Keeps text above the background */
+  }
+
+  .hero h1 {
+    font-size: 24px; /* Adjust font size for better readability */
+    line-height: 1.4;
+    margin-bottom: 15px; /* Add spacing below the title */
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   /* Form container */
   .quote-form {
     width: 90%; /* Reduce form width */
     margin: 20px auto;
+    z-index: 1; /* Ensure the form is visible above background elements */
+    background-color: white; /* Add contrast to form background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding-bottom: 20px; /* Ensure padding at the bottom of the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .quote-form form {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .quote-form input,
@@ -334,11 +368,26 @@ footer {
   .quote-form textarea {
     font-size: 14px; /* Smaller text size */
     margin-bottom: 10px; /* Add spacing between inputs */
+    width: 100%; /* Ensure inputs stretch fully inside the form */
   }
 
   .quote-form button {
     width: 100%;
     font-size: 16px;
     padding: 10px;
+    background-color: #0056b3; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add rounded corners to button */
+    cursor: pointer;
+  }
+
+  .quote-form button:hover {
+    background-color: #003d7a; /* Darker shade on hover */
+  }
+
+  /* Hero Section Adjustments for Small Screens */
+  .hero-content {
+    max-width: 100%; /* Allow hero section to take up more space */
   }
 }
